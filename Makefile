@@ -1,13 +1,13 @@
-
 all:
-	rm -rf TD$(CURRENT).tar.gz
-	tar zcvf TD$(CURRENT).tar.gz `find ./TD$(CURRENT)/ | grep '.cpp'`
+	rm -rf rcoudert-TD$(CURRENT).tar.gz
+	tar zcvf rcoudert-TD$(CURRENT).tar.gz `find rcoudert-TD$(CURRENT)/ | grep '.cpp'`
 
 new:
-	mkdir TD$(CURRENT)
+	mkdir rcoudert-TD$(CURRENT)
 	@echo "created directory for TD$(CURRENT)"
 clean:
-	rm -rf TD$(CURRENT).tar.gz
+	rm -rf rcoudert-TD$(CURRENT).tar.gz
+	find . -type f -name '*.o' -delete
 push:
 	git pull
 	git add .
